@@ -1,0 +1,157 @@
+// IMPORTED SCSS
+@import "./colors", "./typography", "./globals";
+
+// FONT IMPORT
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Outfit:wght@300;400;600&display=swap");
+
+.container {
+   width: max-content;
+   background-color: $bg-card;
+   display: flex;
+   flex-direction: row-reverse;
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+
+.content-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 1.5rem;
+
+   width: 22rem;
+   margin-left: 3rem;
+   margin-right: 5rem;
+
+   & span {
+      color: $bg-accent;
+   }
+
+   & p {
+      color: $white-main-paragraph;
+   }
+
+   & h1 {
+      line-height: 2rem;
+   }
+}
+
+// IMAGE CONTAINER
+.img-container {
+   width: 30.8rem;
+   height: 25.5rem;
+   background: linear-gradient($bg-accent-transparent, $bg-accent-transparent),
+      url("../../images/image-header-desktop.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+
+.insight {
+   display: flex;
+   flex-direction: row;
+   gap: 3rem;
+   margin-top: 2rem;
+}
+
+.insight-num {
+   text-transform: uppercase;
+   font-weight: $bold-weight;
+   font-size: 20px;
+
+   & section {
+      color: $white-stat-heading;
+      font-weight: $normal-weight;
+      font-size: $font-body-copy;
+   }
+}
+
+/*
+===============================
+   MEDIA QUERIES STARTS HERE 
+===============================
+*/
+
+@media screen and (max-width: 910px) {
+
+   body {
+      overflow-x: hidden;
+   }
+
+   main {
+      padding-top: 5rem;
+   }
+
+
+   .container {
+      width: 20rem;
+      background-color: $bg-card;
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      text-align: center;
+   }
+
+   
+   // IMAGE CONTAINER
+   .img-container {
+      width: inherit;
+      height: 16.6rem;
+      background: linear-gradient($bg-accent-transparent, $bg-accent-transparent),
+      url("../../images/image-header-desktop.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 0;
+   }
+
+   .content-container {
+      width: inherit;
+      gap: 1.5rem;
+      margin-left: 0;
+
+      & h1 {
+         line-height: 2rem;
+         margin-top: 2rem;
+      }
+   }
+
+   .insight {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      & .insight-num {
+         font-size: 25px;
+      }
+
+      & .insight-num:first-child {
+         text-transform: lowercase;
+
+         & section {
+            text-transform: uppercase;
+         }
+      }
+   }
+}
+
+// FOOTER PROPERTIES
+.attribution {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   color: $white-main-heading;
+
+   & a {
+      color: $bg-accent;
+      text-decoration: none;
+   }
+}
