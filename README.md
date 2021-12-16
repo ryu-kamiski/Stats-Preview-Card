@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile View](../images/mobile-screenshot.png)
-![Desktop View](../images/stats-preview-card-desktop.png)
+![Mobile View](images/mobile-screenshot.png)
+![Desktop View](images/stats-preview-card-desktop.png)
 
 ### Links
 
